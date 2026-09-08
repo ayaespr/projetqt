@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ui version="4.0">
+  <class>MainWindow</class>
+  <widget class="QMainWindow" name="MainWindow">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1280</width>
+        <height>760</height>
+      </rect>
+    </property>
+    <property name="minimumSize">
+      <size>
+        <width>1280</width>
+        <height>760</height>
+      </size>
+    </property>
+    <property name="maximumSize">
+      <size>
+        <width>1280</width>
+        <height>760</height>
+      </size>
+    </property>
+    <property name="windowTitle">
+      <string>Gestion de formation</string>
+    </property>
+    <property name="styleSheet">
+      <string>QWidget { font-family: "Segoe UI"; font-size: 14px; }
+QWidget#centralwidget { background-color: #315b78; }
+QLabel { color: white; }
+QLineEdit, QComboBox, QDateEdit { background-color: white; color: black; min-height: 30px; }
+QPushButton { color: black; }
+QTableView { background-color: white; color: black; gridline-color: #cccccc; selection-background-color: #c6dce9; selection-color: black; }
+QHeaderView::section { background-color: #eeeeee; color: black; padding: 6px; border: 1px solid #cccccc; }</string>
+    </property>
+    <widget class="QWidget" name="centralwidget">
+      <widget class="QPushButton" name="bt_page_stagiaires">
+        <property name="geometry">
+          <rect>
+            <x>24</x>
+            <y>20</y>
+            <width>110</width>
+            <height>36</height>
+          </rect>
+        </property>
+        <property name="text">
+          <string>Stagiaires</string>
+        </property>
+        <property name="minimumSize">
+          <size>
+            <width>100</width>
+            <height>36</height>
+          </size>
+        </property>
+      </widget>
+      <widget class="QStackedWidget" name="stackedWidget">
+        <property name="geometry">
+          <rect>
+            <x>24</x>
+            <y>80</y>
+            <width>1232</width>
+            <height>660</height>
+          </rect>
+        </property>
+        <widget class="QWidget" name="page_stagiaires">
+          <widget class="QLabel" name="title_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>0</y>
+                <width>370</width>
+                <height>30</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Stagiaire</string>
+            </property>
+          </widget>
+          <widget class="QLabel" name="label_nom_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>42</y>
+                <width>125</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Nom</string>
+            </property>
+          </widget>
+          <widget class="QLineEdit" name="nom_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>140</x>
+                <y>42</y>
+                <width>245</width>
+                <height>36</height>
+              </rect>
+            </property>
+          </widget>
+          <widget class="QLabel" name="label_prenom_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>92</y>
+                <width>125</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Prenom</string>
+            </property>
+          </widget>
+          <widget class="QLineEdit" name="prenom_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>140</x>
+                <y>92</y>
+                <width>245</width>
+                <height>36</height>
+              </rect>
+            </property>
+          </widget>
+          <widget class="QLabel" name="label_email_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>142</y>
+                <width>125</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Email</string>
+            </property>
+          </widget>
+          <widget class="QLineEdit" name="email_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>140</x>
+                <y>142</y>
+                <width>245</width>
+                <height>36</height>
+              </rect>
+            </property>
+          </widget>
+          <widget class="QLabel" name="label_telephone_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>192</y>
+                <width>125</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Telephone</string>
+            </property>
+          </widget>
+          <widget class="QLineEdit" name="telephone_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>140</x>
+                <y>192</y>
+                <width>245</width>
+                <height>36</height>
+              </rect>
+            </property>
+          </widget>
+          <widget class="QLabel" name="label_adresse_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>242</y>
+                <width>125</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Adresse</string>
+            </property>
+          </widget>
+          <widget class="QLineEdit" name="adresse_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>140</x>
+                <y>242</y>
+                <width>245</width>
+                <height>36</height>
+              </rect>
+            </property>
+          </widget>
+          <widget class="QLabel" name="label_date_de_naissance_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>292</y>
+                <width>125</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Date de naissance</string>
+            </property>
+          </widget>
+          <widget class="QDateEdit" name="date_de_naissance_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>140</x>
+                <y>292</y>
+                <width>245</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="calendarPopup">
+              <bool>true</bool>
+            </property>
+            <property name="displayFormat">
+              <string>dd/MM/yyyy</string>
+            </property>
+          </widget>
+          <widget class="QLabel" name="label_sexe_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>342</y>
+                <width>125</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Sexe</string>
+            </property>
+          </widget>
+          <widget class="QComboBox" name="sexe_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>140</x>
+                <y>342</y>
+                <width>245</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <item>
+              <property name="text">
+                <string>Homme</string>
+              </property>
+            </item>
+            <item>
+              <property name="text">
+                <string>Femme</string>
+              </property>
+            </item>
+          </widget>
+          <widget class="QLabel" name="label_cin_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>392</y>
+                <width>125</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>CIN</string>
+            </property>
+          </widget>
+          <widget class="QLineEdit" name="cin_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>140</x>
+                <y>392</y>
+                <width>245</width>
+                <height>36</height>
+              </rect>
+            </property>
+          </widget>
+          <widget class="QLabel" name="label_niveau_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>442</y>
+                <width>125</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Niveau</string>
+            </property>
+          </widget>
+          <widget class="QLineEdit" name="niveau_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>140</x>
+                <y>442</y>
+                <width>245</width>
+                <height>36</height>
+              </rect>
+            </property>
+          </widget>
+          <widget class="QPushButton" name="bt_ajouter_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>496</y>
+                <width>180</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Ajouter</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+          <widget class="QPushButton" name="bt_modifier_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>205</x>
+                <y>496</y>
+                <width>180</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Modifier</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+          <widget class="QPushButton" name="bt_vider_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>550</y>
+                <width>180</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Nouveau</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+          <widget class="QLabel" name="listTitle_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>420</x>
+                <y>0</y>
+                <width>800</width>
+                <height>30</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Liste des stagiaires</string>
+            </property>
+          </widget>
+          <widget class="QComboBox" name="choix_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>420</x>
+                <y>40</y>
+                <width>140</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <item>
+              <property name="text">
+                <string>NOM</string>
+              </property>
+            </item>
+            <item>
+              <property name="text">
+                <string>PRENOM</string>
+              </property>
+            </item>
+            <item>
+              <property name="text">
+                <string>EMAIL</string>
+              </property>
+            </item>
+            <item>
+              <property name="text">
+                <string>TELEPHONE</string>
+              </property>
+            </item>
+            <item>
+              <property name="text">
+                <string>ADRESSE</string>
+              </property>
+            </item>
+            <item>
+              <property name="text">
+                <string>SEXE</string>
+              </property>
+            </item>
+            <item>
+              <property name="text">
+                <string>CIN</string>
+              </property>
+            </item>
+            <item>
+              <property name="text">
+                <string>NIVEAU</string>
+              </property>
+            </item>
+          </widget>
+          <widget class="QLineEdit" name="chercher_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>575</x>
+                <y>40</y>
+                <width>500</width>
+                <height>36</height>
+              </rect>
+            </property>
+          </widget>
+          <widget class="QPushButton" name="bt_chercher_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>1090</x>
+                <y>40</y>
+                <width>130</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Rechercher</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+          <widget class="QComboBox" name="ordre_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>420</x>
+                <y>90</y>
+                <width>180</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <item>
+              <property name="text">
+                <string>ASC</string>
+              </property>
+            </item>
+            <item>
+              <property name="text">
+                <string>DESC</string>
+              </property>
+            </item>
+          </widget>
+          <widget class="QPushButton" name="bt_tri_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>615</x>
+                <y>90</y>
+                <width>120</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Trier</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+          <widget class="QPushButton" name="bt_actualiser_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>750</x>
+                <y>90</y>
+                <width>130</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Actualiser</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+          <widget class="QTableView" name="tableView_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>420</x>
+                <y>140</y>
+                <width>800</width>
+                <height>460</height>
+              </rect>
+            </property>
+          </widget>
+          <widget class="QPushButton" name="bt_supprimer_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>420</x>
+                <y>616</y>
+                <width>185</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Supprimer</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+          <widget class="QPushButton" name="bt_historique_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>625</x>
+                <y>616</y>
+                <width>185</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Historique</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+          <widget class="QPushButton" name="bt_pdf_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>830</x>
+                <y>616</y>
+                <width>185</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>PDF</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+          <widget class="QPushButton" name="bt_stat_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>1035</x>
+                <y>616</y>
+                <width>185</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Statistiques</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+        </widget>
+      </widget>
+    </widget>
+  </widget>
+  <resources />
+  <connections />
+</ui>
