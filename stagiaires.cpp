@@ -3,6 +3,23 @@
 #include <QStringList>
 #include <QVariant>
 
+QMap<QString, int> stagiaires::statistiquesParSexe()
+{
+    QMap<QString, int> stats;
+    QSqlQuery q("SELECT SEXE, COUNT(*) FROM STAGIAIRES GROUP BY SEXE");
+    while (q.next()) {
+        stats[q.value(0).toString()] = q.value(1).toInt();
+    }
+    return stats;
+}
+
+QSqlQueryModel *stagiaires::listePourAffectation()
+{
+    auto *model = new QSqlQueryModel;
+    model->setQuery("SELECT ID_STAGIAIRE, NOM, PRENOM FROM STAGIAIRES ORDER BY NOM, PRENOM");
+    return model;
+}
+
 stagiaires::stagiaires() : id_stagiaire(0) {}
 stagiaires::stagiaires(int id_stagiaire, QString nom, QString prenom, QString email, QString telephone, QString adresse, QDate date_de_naissance, QString sexe, QString cin, QString niveau)
 {
@@ -82,4 +99,3 @@ QSqlQueryModel *stagiaires::tri(QString column, QString choix)
     model->setQuery("SELECT id_stagiaire, nom, prenom, email, telephone, adresse, date_de_naissance, sexe, cin, niveau FROM STAGIAIRES ORDER BY " + column + " " + choix);
     return model;
 }
-

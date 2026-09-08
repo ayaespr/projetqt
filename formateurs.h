@@ -1,6 +1,7 @@
 #ifndef FORMATEURS_H
 #define FORMATEURS_H
 #include <QString>
+#include <QMap>
 #include <QDate>
 #include <QSqlQueryModel>
 class formateurs
@@ -32,6 +33,8 @@ public:
     bool modifier();
     bool supprimer(int id);
     QSqlQueryModel *afficher();
+    QSqlQueryModel *listePourAffectation();
+    QMap<QString, int> statistiquesParSexe();
     QSqlQueryModel *chercher(QString column, QString text);
     QSqlQueryModel *tri(QString column, QString choix);
 private:
@@ -47,4 +50,3 @@ private:
     QString sexe;
 };
 #endif
-

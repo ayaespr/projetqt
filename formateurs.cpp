@@ -3,6 +3,23 @@
 #include <QStringList>
 #include <QVariant>
 
+QMap<QString, int> formateurs::statistiquesParSexe()
+{
+    QMap<QString, int> stats;
+    QSqlQuery q("SELECT SEXE, COUNT(*) FROM FORMATEURS GROUP BY SEXE");
+    while (q.next()) {
+        stats[q.value(0).toString()] = q.value(1).toInt();
+    }
+    return stats;
+}
+
+QSqlQueryModel *formateurs::listePourAffectation()
+{
+    auto *model = new QSqlQueryModel;
+    model->setQuery("SELECT ID_FORMATEUR, NOM, PRENOM FROM FORMATEURS ORDER BY NOM, PRENOM");
+    return model;
+}
+
 formateurs::formateurs() : id_formateur(0) {}
 formateurs::formateurs(int id_formateur, QString nom, QString prenom, QString cin, QString email, QString telephone, QString specialite, QDate date_embauche, QString statut, QString sexe)
 {
@@ -82,4 +99,3 @@ QSqlQueryModel *formateurs::tri(QString column, QString choix)
     model->setQuery("SELECT id_formateur, nom, prenom, cin, email, telephone, specialite, date_embauche, statut, sexe FROM FORMATEURS ORDER BY " + column + " " + choix);
     return model;
 }
-
