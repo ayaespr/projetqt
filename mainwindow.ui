@@ -54,6 +54,25 @@ QHeaderView::section { background-color: #eeeeee; color: black; padding: 6px; bo
           </size>
         </property>
       </widget>
+      <widget class="QPushButton" name="bt_page_formateurs">
+        <property name="geometry">
+          <rect>
+            <x>150</x>
+            <y>20</y>
+            <width>110</width>
+            <height>36</height>
+          </rect>
+        </property>
+        <property name="text">
+          <string>Formateurs</string>
+        </property>
+        <property name="minimumSize">
+          <size>
+            <width>100</width>
+            <height>36</height>
+          </size>
+        </property>
+      </widget>
       <widget class="QStackedWidget" name="stackedWidget">
         <property name="geometry">
           <rect>
@@ -575,6 +594,547 @@ QHeaderView::section { background-color: #eeeeee; color: black; padding: 6px; bo
             </property>
           </widget>
           <widget class="QPushButton" name="bt_stat_stagiaire">
+            <property name="geometry">
+              <rect>
+                <x>1035</x>
+                <y>616</y>
+                <width>185</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Statistiques</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+        </widget>
+        <widget class="QWidget" name="page_formateurs">
+          <widget class="QLabel" name="title_formateur">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>0</y>
+                <width>370</width>
+                <height>30</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Formateur</string>
+            </property>
+          </widget>
+          <widget class="QLabel" name="label_nom_formateur">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>42</y>
+                <width>125</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Nom</string>
+            </property>
+          </widget>
+          <widget class="QLineEdit" name="nom_formateur">
+            <property name="geometry">
+              <rect>
+                <x>140</x>
+                <y>42</y>
+                <width>245</width>
+                <height>36</height>
+              </rect>
+            </property>
+          </widget>
+          <widget class="QLabel" name="label_prenom_formateur">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>92</y>
+                <width>125</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Prenom</string>
+            </property>
+          </widget>
+          <widget class="QLineEdit" name="prenom_formateur">
+            <property name="geometry">
+              <rect>
+                <x>140</x>
+                <y>92</y>
+                <width>245</width>
+                <height>36</height>
+              </rect>
+            </property>
+          </widget>
+          <widget class="QLabel" name="label_cin_formateur">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>142</y>
+                <width>125</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>CIN</string>
+            </property>
+          </widget>
+          <widget class="QLineEdit" name="cin_formateur">
+            <property name="geometry">
+              <rect>
+                <x>140</x>
+                <y>142</y>
+                <width>245</width>
+                <height>36</height>
+              </rect>
+            </property>
+          </widget>
+          <widget class="QLabel" name="label_email_formateur">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>192</y>
+                <width>125</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Email</string>
+            </property>
+          </widget>
+          <widget class="QLineEdit" name="email_formateur">
+            <property name="geometry">
+              <rect>
+                <x>140</x>
+                <y>192</y>
+                <width>245</width>
+                <height>36</height>
+              </rect>
+            </property>
+          </widget>
+          <widget class="QLabel" name="label_telephone_formateur">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>242</y>
+                <width>125</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Telephone</string>
+            </property>
+          </widget>
+          <widget class="QLineEdit" name="telephone_formateur">
+            <property name="geometry">
+              <rect>
+                <x>140</x>
+                <y>242</y>
+                <width>245</width>
+                <height>36</height>
+              </rect>
+            </property>
+          </widget>
+          <widget class="QLabel" name="label_specialite_formateur">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>292</y>
+                <width>125</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Specialite</string>
+            </property>
+          </widget>
+          <widget class="QLineEdit" name="specialite_formateur">
+            <property name="geometry">
+              <rect>
+                <x>140</x>
+                <y>292</y>
+                <width>245</width>
+                <height>36</height>
+              </rect>
+            </property>
+          </widget>
+          <widget class="QLabel" name="label_date_embauche_formateur">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>342</y>
+                <width>125</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Date d'embauche</string>
+            </property>
+          </widget>
+          <widget class="QDateEdit" name="date_embauche_formateur">
+            <property name="geometry">
+              <rect>
+                <x>140</x>
+                <y>342</y>
+                <width>245</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="calendarPopup">
+              <bool>true</bool>
+            </property>
+            <property name="displayFormat">
+              <string>dd/MM/yyyy</string>
+            </property>
+          </widget>
+          <widget class="QLabel" name="label_statut_formateur">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>392</y>
+                <width>125</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Statut</string>
+            </property>
+          </widget>
+          <widget class="QComboBox" name="statut_formateur">
+            <property name="geometry">
+              <rect>
+                <x>140</x>
+                <y>392</y>
+                <width>245</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <item>
+              <property name="text">
+                <string>Actif</string>
+              </property>
+            </item>
+            <item>
+              <property name="text">
+                <string>Inactif</string>
+              </property>
+            </item>
+          </widget>
+          <widget class="QLabel" name="label_sexe_formateur">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>442</y>
+                <width>125</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Sexe</string>
+            </property>
+          </widget>
+          <widget class="QComboBox" name="sexe_formateur">
+            <property name="geometry">
+              <rect>
+                <x>140</x>
+                <y>442</y>
+                <width>245</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <item>
+              <property name="text">
+                <string>Homme</string>
+              </property>
+            </item>
+            <item>
+              <property name="text">
+                <string>Femme</string>
+              </property>
+            </item>
+          </widget>
+          <widget class="QPushButton" name="bt_ajouter_formateur">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>496</y>
+                <width>180</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Ajouter</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+          <widget class="QPushButton" name="bt_modifier_formateur">
+            <property name="geometry">
+              <rect>
+                <x>205</x>
+                <y>496</y>
+                <width>180</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Modifier</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+          <widget class="QPushButton" name="bt_vider_formateur">
+            <property name="geometry">
+              <rect>
+                <x>8</x>
+                <y>550</y>
+                <width>180</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Nouveau</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+          <widget class="QLabel" name="listTitle_formateur">
+            <property name="geometry">
+              <rect>
+                <x>420</x>
+                <y>0</y>
+                <width>800</width>
+                <height>30</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Liste des formateurs</string>
+            </property>
+          </widget>
+          <widget class="QComboBox" name="choix_formateur">
+            <property name="geometry">
+              <rect>
+                <x>420</x>
+                <y>40</y>
+                <width>140</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <item>
+              <property name="text">
+                <string>NOM</string>
+              </property>
+            </item>
+            <item>
+              <property name="text">
+                <string>PRENOM</string>
+              </property>
+            </item>
+            <item>
+              <property name="text">
+                <string>CIN</string>
+              </property>
+            </item>
+            <item>
+              <property name="text">
+                <string>EMAIL</string>
+              </property>
+            </item>
+            <item>
+              <property name="text">
+                <string>TELEPHONE</string>
+              </property>
+            </item>
+            <item>
+              <property name="text">
+                <string>SPECIALITE</string>
+              </property>
+            </item>
+            <item>
+              <property name="text">
+                <string>STATUT</string>
+              </property>
+            </item>
+            <item>
+              <property name="text">
+                <string>SEXE</string>
+              </property>
+            </item>
+          </widget>
+          <widget class="QLineEdit" name="chercher_formateur">
+            <property name="geometry">
+              <rect>
+                <x>575</x>
+                <y>40</y>
+                <width>500</width>
+                <height>36</height>
+              </rect>
+            </property>
+          </widget>
+          <widget class="QPushButton" name="bt_chercher_formateur">
+            <property name="geometry">
+              <rect>
+                <x>1090</x>
+                <y>40</y>
+                <width>130</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Rechercher</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+          <widget class="QComboBox" name="ordre_formateur">
+            <property name="geometry">
+              <rect>
+                <x>420</x>
+                <y>90</y>
+                <width>180</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <item>
+              <property name="text">
+                <string>ASC</string>
+              </property>
+            </item>
+            <item>
+              <property name="text">
+                <string>DESC</string>
+              </property>
+            </item>
+          </widget>
+          <widget class="QPushButton" name="bt_tri_formateur">
+            <property name="geometry">
+              <rect>
+                <x>615</x>
+                <y>90</y>
+                <width>120</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Trier</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+          <widget class="QPushButton" name="bt_actualiser_formateur">
+            <property name="geometry">
+              <rect>
+                <x>750</x>
+                <y>90</y>
+                <width>130</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Actualiser</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+          <widget class="QTableView" name="tableView_formateur">
+            <property name="geometry">
+              <rect>
+                <x>420</x>
+                <y>140</y>
+                <width>800</width>
+                <height>460</height>
+              </rect>
+            </property>
+          </widget>
+          <widget class="QPushButton" name="bt_supprimer_formateur">
+            <property name="geometry">
+              <rect>
+                <x>420</x>
+                <y>616</y>
+                <width>185</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Supprimer</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+          <widget class="QPushButton" name="bt_historique_formateur">
+            <property name="geometry">
+              <rect>
+                <x>625</x>
+                <y>616</y>
+                <width>185</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>Historique</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+          <widget class="QPushButton" name="bt_pdf_formateur">
+            <property name="geometry">
+              <rect>
+                <x>830</x>
+                <y>616</y>
+                <width>185</width>
+                <height>36</height>
+              </rect>
+            </property>
+            <property name="text">
+              <string>PDF</string>
+            </property>
+            <property name="minimumSize">
+              <size>
+                <width>100</width>
+                <height>36</height>
+              </size>
+            </property>
+          </widget>
+          <widget class="QPushButton" name="bt_stat_formateur">
             <property name="geometry">
               <rect>
                 <x>1035</x>
